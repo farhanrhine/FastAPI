@@ -1,3 +1,4 @@
+# all fastapi code here
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from schema.user_input import UserInput
@@ -40,7 +41,7 @@ def predict_premium(data: UserInput):
     
     except Exception as e:
 
-        return JSONResponse(status_code=500, content=str(e))
+        return JSONResponse(status_code=500, content=str(e)) # 500 Internal Server Error
 
 
 
