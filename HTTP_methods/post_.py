@@ -10,5 +10,5 @@ class User(BaseModel):
 
 @app.post("/users")
 def create_user(user:User):
-    return{"message": f"User {user.name} created"}
+    return{"message": f"User {user.name}  created"}
 

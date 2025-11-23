@@ -14,6 +14,6 @@ def create_user(user_id: int, user: User):
 
 
 
-@app.put('/users/{user_id}')
-def update_user(user_id : int , user:User):
-    return {"message" : f" New User name {user.name} updated with same ID {user_id} successfully"}
+@app.patch('/users/{user_id}')
+def patch_user(user_id : int , user:User):
+    return {"message" : f"User {user.name} with ID {user_id} partially updated"}

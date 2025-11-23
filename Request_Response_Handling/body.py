@@ -1,3 +1,4 @@
+# body or requst parameters are used to send more complex data structures like JSON objects in the request body.
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -11,4 +12,4 @@ class User(BaseModel):
 
 @app.post("/create_user")
 def create_user(user:User):
-    return {"message": f"User {user.name} created successfully"}
+    return {"message": f"User Name : {user.name}, Age : {user.age}, Email : {user.email} created successfully"}
